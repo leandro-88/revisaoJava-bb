@@ -222,7 +222,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
       
       <!-- Música 1 -->
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
-        <span style="color: #eee; font-size: 12px; font-family: monospace;">1. Thread da Posse (Extends Sucesso)</span>
+        <span style="color: #eee; font-size: 12px; font-family: monospace;">1. Thread da Posse</span>
         <div>
           <button onclick="playAudio('musica1')" style="background: var(--roxo, #673ab7); border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold; transition: 0.2s;">PLAY</button>
           <button onclick="stopAudio('musica1')" style="background: #444; border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold; transition: 0.2s;">STOP</button>
@@ -284,20 +284,36 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
     <div class="a5" style="color:rgba(255,255,255,.25);font-size:11px;margin-top:20px;letter-spacing:2px">43 SLIDES · TOQUE PARA AVANÇAR ▶</div>
   </div>
 </div>
+
+<!-- SCRIPTS DE ÁUDIO E LETRA -->
+<script>
+  // Mock para exemplo. Lembre-se de colocar as suas músicas na mesma pasta e com esses nomes exatos.
   const audios = {
-    musica1: new Audio('Polimorfismo_da_Aprovacao.mp3'),
-    musica2: new Audio('Thread_da_Posse.mp3')
+    musica1: new Audio('Thread_da_Posse.mp3'),
+    musica2: new Audio('Polimorfismo_da_Aprovacao.mp3')
   };
 
   function playAudio(id) {
-    // Para todas antes de dar play em uma nova
+    // Para todas as músicas antes de dar play em uma nova (evita encavalar o som)
     Object.values(audios).forEach(a => { a.pause(); a.currentTime = 0; });
     audios[id].play();
   }
 
   function stopAudio(id) {
-    audios[id].pause();
-    audios[id].currentTime = 0;
+    if(audios[id]) {
+        audios[id].pause();
+        audios[id].currentTime = 0;
+    }
+  }
+
+  // Função para fazer a caixa de letra aparecer e sumir (Toggle)
+  function toggleLetra() {
+      var caixa = document.getElementById("caixaLetra");
+      if (caixa.style.display === "none") {
+          caixa.style.display = "block";
+      } else {
+          caixa.style.display = "none";
+      }
   }
 </script>
 
