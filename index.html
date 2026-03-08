@@ -47,10 +47,10 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
 /* BACKGROUNDS */
 .s-dark{background:var(--esc)}
 .s-az{background:var(--az)}
+.s-roxo{background:#1A0A3A}
 .s-code{background:#0D1117}
 .s-warn{background:#3B0000}
 .s-green{background:#003D1F}
-.s-purple{background:#1A0A3A}
 .s-quiz{background:#0A1A2F}
 .s-light{background:#F8F6F0}
 
@@ -64,6 +64,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
 .badge-vd{background:var(--vd);color:#fff}
 .badge-vm{background:var(--vm);color:#fff}
 .badge-cx{background:var(--ciano);color:var(--esc)}
+.badge-roxo{background:var(--roxo);color:#fff}
 .body{font-size:clamp(13px,3.8vw,16px);line-height:1.65}
 .sm{font-size:clamp(11px,3vw,13px);line-height:1.6;opacity:.85}
 .mono{font-family:'JetBrains Mono',monospace}
@@ -75,48 +76,11 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
 .card-vd{background:rgba(0,168,107,.12);border:1px solid rgba(0,168,107,.3);border-radius:12px;padding:14px 18px;width:100%;margin:6px 0}
 .card-vm{background:rgba(229,57,53,.12);border:1px solid rgba(229,57,53,.3);border-radius:12px;padding:14px 18px;width:100%;margin:6px 0}
 .card-cx{background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.3);border-radius:12px;padding:14px 18px;width:100%;margin:6px 0}
+.card-roxo{background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.3);border-radius:12px;padding:14px 18px;width:100%;margin:6px 0}
 
 /* CODE BLOCK */
 .code-block{background:#0D1117;border:1px solid #30363D;border-radius:10px;padding:14px 16px;width:100%;margin:8px 0;font-family:'JetBrains Mono',monospace;font-size:clamp(10px,2.8vw,13px);line-height:1.7;overflow-x:auto}
 .kw{color:#FF7B72}.fn{color:#D2A8FF}.st{color:#A5D6FF}.cm{color:#8B949E;font-style:italic}.nm{color:#79C0FF}.op{color:#FF7B72}
-
-/* ARRAY VISUAL */
-.arr-wrap{display:flex;gap:4px;justify-content:center;flex-wrap:wrap;margin:10px 0;width:100%}
-.arr-cell{min-width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;transition:all .3s;border:2px solid transparent;position:relative}
-.arr-cell.normal{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff}
-.arr-cell.found{background:var(--am);border-color:var(--am);color:var(--esc);transform:scale(1.15)}
-.arr-cell.searching{background:rgba(6,182,212,.3);border-color:var(--ciano);color:#fff;animation:pulse .6s ease infinite}
-.arr-cell.discarded{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.07);color:rgba(255,255,255,.25)}
-.arr-cell.sorted{background:rgba(0,168,107,.25);border-color:var(--vd);color:#fff}
-.arr-cell.comparing{background:rgba(255,107,0,.3);border-color:var(--or);color:#fff;transform:scale(1.1)}
-.arr-cell.swapping{background:rgba(229,57,53,.35);border-color:var(--vm);color:#fff}
-.arr-idx{position:absolute;bottom:-18px;font-size:9px;color:rgba(255,255,255,.3);font-weight:400;font-family:'DM Sans',sans-serif}
-
-/* STEP DISPLAY */
-.step-info{background:rgba(255,208,0,.1);border:1px solid rgba(255,208,0,.2);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--am);font-family:'JetBrains Mono',monospace;margin:8px 0;text-align:center;min-height:28px;width:100%}
-
-/* PLAYBACK CONTROLS */
-.controls{display:flex;gap:8px;justify-content:center;margin:10px 0;flex-wrap:wrap}
-.ctrl-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;letter-spacing:.5px}
-.ctrl-btn:hover{background:var(--am);color:var(--esc);border-color:var(--am)}
-.ctrl-btn.active{background:var(--am);color:var(--esc);border-color:var(--am)}
-
-/* STACK/QUEUE VISUAL */
-.stack-wrap{display:flex;flex-direction:column;align-items:center;gap:3px;margin:8px 0}
-.stack-cell{width:120px;padding:8px 14px;border-radius:6px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;transition:all .35s;border:2px solid}
-.s-empty{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:rgba(255,255,255,.2)}
-.s-filled{background:rgba(0,87,168,.4);border-color:var(--az2);color:#fff}
-.s-top{background:rgba(255,208,0,.2);border-color:var(--am);color:var(--am)}
-
-.queue-wrap{display:flex;gap:3px;align-items:center;justify-content:center;margin:8px 0;flex-wrap:wrap}
-.q-cell{min-width:44px;height:40px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;border:2px solid;transition:all .35s}
-.q-empty{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:rgba(255,255,255,.2)}
-.q-filled{background:rgba(0,168,107,.25);border-color:var(--vd);color:#fff}
-.q-front{background:rgba(255,208,0,.2);border-color:var(--am);color:var(--am)}
-.q-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--cinza);margin:0 4px}
-
-/* TREE VISUAL */
-.tree-svg{width:100%;max-width:360px;height:200px;margin:6px 0}
 
 /* COMPARE TABLE */
 .cmp{width:100%;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.12);margin:8px 0}
@@ -139,7 +103,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
 .qopt:hover{background:rgba(255,208,0,.15);border-color:var(--am)}
 .qopt.correct{background:rgba(0,168,107,.35)!important;border-color:var(--vd)!important}
 .qopt.wrong{background:rgba(229,57,53,.35)!important;border-color:var(--vm)!important}
-.qfb{font-size:12px;color:var(--am);text-align:center;margin-top:8px;font-weight:700;min-height:20px}
+.qfb{font-size:12px;color:var(--am);text-align:center;margin-top:8px;font-weight:700;min-height:20px;white-space:pre-wrap;line-height:1.5}
 
 /* NAV */
 #nav{position:fixed;bottom:44px;left:0;right:0;display:flex;justify-content:space-between;padding:0 18px;z-index:200}
@@ -149,6 +113,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
 #dots{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:200}
 .dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .3s}
 .dot.active{background:var(--am);width:14px;border-radius:3px}
+
 
 /* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
@@ -171,29 +136,33 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
 .chip-or{background:rgba(255,107,0,.15);border-color:rgba(255,107,0,.4);color:#FB923C}
 .chip-vm{background:rgba(229,57,53,.15);border-color:rgba(229,57,53,.4);color:#F87171}
 .chip-cx{background:rgba(6,182,212,.1);border-color:rgba(6,182,212,.4);color:var(--ciano)}
+.chip-roxo{background:rgba(124,58,237,.15);border-color:rgba(124,58,237,.4);color:#D8B4FE}
 
 /* STEP NUMBERED */
 .step{display:flex;align-items:flex-start;gap:12px;margin:7px 0;width:100%}
 .snum{width:28px;height:28px;border-radius:50%;background:var(--am);color:var(--esc);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
 .stxt{font-size:clamp(12px,3.3vw,14px);line-height:1.55;flex:1}
 
-/* NODE VISUAL */
-.node-row{display:flex;gap:6px;align-items:center;justify-content:center;margin:4px 0;flex-wrap:wrap}
-.node{min-width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:15px;border:2px solid;position:relative;flex-shrink:0}
-.node-az{background:rgba(0,87,168,.4);border-color:var(--az2);color:#7BB8FF}
-.node-am{background:rgba(255,208,0,.2);border-color:var(--am);color:var(--am)}
-.node-vd{background:rgba(0,168,107,.25);border-color:var(--vd);color:#4ADE80}
-.node-vm{background:rgba(229,57,53,.25);border-color:var(--vm);color:#F87171}
-.arrow{color:rgba(255,255,255,.3);font-size:18px}
+/* INFO CARDS */
+.info-box{background:rgba(255,208,0,.1);border-left:3px solid var(--am);padding:10px 14px;margin:8px 0;font-size:13px;border-radius:4px}
+.warning-box{background:rgba(229,57,53,.1);border-left:3px solid var(--vm);padding:10px 14px;margin:8px 0;font-size:13px;border-radius:4px}
+.success-box{background:rgba(0,168,107,.1);border-left:3px solid var(--vd);padding:10px 14px;margin:8px 0;font-size:13px;border-radius:4px}
+.detail{font-size:12px;color:rgba(255,255,255,.7);margin-top:4px}
+
+/* SYNTAX HIGHLIGHT */
+.syntax{background:rgba(0,0,0,.3);border-left:3px solid var(--ciano);padding:8px 12px;margin:6px 0;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:12px}
+
+/* COMPARATION PAIRS */
+.pair-comparison{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0;width:100%}
+.pair-item{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px;font-size:12px}
+.pair-label{font-weight:700;color:var(--am);margin-bottom:6px;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
 
 </style>
-
 </head>
 <body>
 <div id="topbar"><div id="topfill" style="width: 4.54545%;"></div></div>
 <div id="counter">1/22</div>
 <div id="stage">
-
 
 <!-- ╔══════════════════════════════╗ -->
 <!-- ║  SLIDE 1 — CAPA              ║ -->
@@ -1973,20 +1942,14 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
 </div>
 
 <div id="nav">
-    <button class="nbtn" id="bp" onclick="go(-1)">◀</button>
-    <button class="nbtn" id="bn" onclick="go(1)">▶</button>
+  <button class="nbtn" id="prev" onclick="prev()" disabled="">❮</button>
+  <button class="nbtn" id="next" onclick="next()">❯</button>
 </div>
 
 <div id="dots"></div>
 
-<!-- NAVIGATION -->
-<div id="nav">
-  <button class="nbtn" id="prev" onclick="prev()" disabled="">❮</button>
-  <button class="nbtn" id="next" onclick="next()">❯</button>
-</div>
-<div id="dots"><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
-
 <script>
+
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
@@ -2089,6 +2052,3 @@ document.addEventListener('keydown', (e) => {
 
 updateUI();
 </script>
-
-
-</body></html>
