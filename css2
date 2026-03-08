@@ -1,0 +1,250 @@
+/* ==========================================================================
+   1. IMPORTAÇÃO DE FONTES (Google Fonts)
+   ========================================================================== */
+
+/* Bebas Neue: Fonte de impacto, ótima para títulos e badges */
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bebasneue/v16/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2) format('woff2');
+}
+
+/* DM Sans: Fonte principal para textos de leitura, botões e descrições */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300 400 500 700; /* Variações do leve ao negrito */
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2) format('woff2');
+}
+
+/* JetBrains Mono: Fonte de largura fixa (monospace), ideal para códigos e status técnicos */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2) format('woff2');
+}
+
+.qfb {
+    /* Mantenha o que você já tem aqui (cores, padding, etc) */
+    
+    white-space: pre-wrap; /* MÁGICA AQUI: Força o HTML a respeitar os "Enters" do seu texto */
+    
+    line-height: 1.5; /* Dá um respiro entre as linhas para ficar mais profissional */
+}
+/* ==========================================================================
+   2. COMPONENTES DE ÁUDIO (Player Customizado)
+   ========================================================================== */
+
+/* Container principal do card de áudio */
+.audio-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Alinhamento da imagem/ícone e textos do áudio */
+.audio-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+
+/* Ícone circular que acompanha o áudio */
+.music-icon {
+    font-size: 30px;
+    background: var(--vd); /* Usa a variável de cor verde */
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.audio-title {
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+}
+
+.audio-subtitle {
+    color: #aaa;
+    font-size: 12px;
+}
+
+/* Estilização básica da barra de controle nativa do navegador */
+audio::-webkit-media-controls-panel {
+    background-color: #f1f1f1;
+}
+
+/* ==========================================================================
+   3. SIMULADOR DE ÁRVORE AVL (Slide 23) - 
+   ========================================================================== */
+
+
+/* --- Layout de Cabeçalho (Cards Lado a Lado) --- */
+.avl-grid-header {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* Força dois retângulos lado a lado */
+    gap: 12px !important;
+    margin-bottom: 20px !important;
+    width: 100% !important;
+    align-items: stretch !important; /* Faz os dois terem a mesma altura */
+}
+
+/* Garante que os cards aceitem o layout de grade sem empilhar */
+.avl-grid-header .card.a3 {
+    width: 100% !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px !important;
+    min-height: 85px; 
+}
+
+/* --- Container Principal do Simulador --- */
+.avl-container {
+    background: rgba(0,0,0,0.3); 
+    border: 1px solid rgba(255,255,255,0.1); 
+    position: relative; 
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.avl-status-text {
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    font-size: 0.75em; 
+    color: var(--ciano); 
+    font-family: 'JetBrains Mono', monospace;
+    z-index: 2;
+    text-shadow: 0 0 5px rgba(0,229,255,0.5);
+}
+
+.avl-svg-wrapper {
+    height: 220px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    background: radial-gradient(circle at center, rgba(0,229,255,0.05) 0%, transparent 75%);
+}
+
+#avl-explanation {
+    transition: all 0.5s ease;
+    border-left: 3px solid var(--ciano);
+    padding-left: 15px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+/* --- ANIMAÇÕES FLUIDAS DO SVG (Movimento Orgânico) --- */
+#avl-anim-svg circle, 
+#avl-anim-svg line, 
+#avl-anim-svg text {
+    transition: all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform, cx, cy, x1, y1, x2, y2;
+}
+
+#avl-anim-svg g {
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+/* Feedback visual de erro (Pulsar Suave) */
+@keyframes pulseError {
+    0% { filter: drop-shadow(0 0 2px var(--vm)); opacity: 1; }
+    50% { filter: drop-shadow(0 0 12px var(--vm)); opacity: 0.85; }
+    100% { filter: drop-shadow(0 0 2px var(--vm)); opacity: 1; }
+}
+
+.node-is-error {
+    animation: pulseError 1s infinite ease-in-out;
+}
+
+/* --- CONTROLES E BOTÕES (Glassmorphism Style) --- */
+.avl-controls {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 8px; 
+    padding: 15px; 
+    border-top: 1px solid rgba(255,255,255,0.1);
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.btn-avl {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    color: #fff;
+    padding: 10px 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-avl:hover:not(:disabled) {
+    background: rgba(0, 229, 255, 0.15);
+    border-color: var(--ciano);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+    transform: translateY(-2px);
+    color: var(--ciano);
+}
+
+.btn-avl:active:not(:disabled) {
+    transform: translateY(1px);
+    background: var(--ciano);
+    color: var(--esc);
+}
+
+.btn-avl:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+    border-color: rgba(255,255,255,0.1);
+    filter: grayscale(1);
+}
+
+/* --- OBSERVAÇÃO DIDÁTICA --- */
+.avl-obs {
+    background: rgba(0, 229, 255, 0.05);
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 3px solid var(--ciano);
+    animation: fadeIn 0.8s ease-out;
+}
+
+.avl-obs b {
+    letter-spacing: 0.5px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 600px) {
+    .avl-grid-header {
+        grid-template-columns: 1fr !important; /* Empilha no celular para não esmagar */
+    }
+    .avl-controls {
+        grid-template-columns: 1fr 1fr; /* 2x2 no celular */
+    }
+}
+
