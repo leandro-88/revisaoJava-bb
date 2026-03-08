@@ -190,45 +190,100 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
 
 <div class="slide s-dark active" id="s0">
   <div class="sc" style="text-align:center">
-    <div class="badge badge-roxo a1">BB · Agente de Tecnologia · Módulo 2</div>
-    <div class="big a2" style="color:var(--roxo)">Java SE 11<br><span style="color:var(--ciano);font-size:.5em">Cesgranrio Edition</span></div>
-    <div class="big a2" style="color:#fff;font-size:clamp(24px,7vw,48px);margin-top:-4px">Novidades &amp; Pegadinhas</div>
-    <div class="a3" style="color:var(--cinza);font-size:14px;margin:16px 0">A Cesgranrio ama cobrar as mudanças entre Java 8 e 11</div>
+    <div class="badge badge-roxo a1" style="background-color: rgba(103, 58, 183, 0.2); color: #b388ff; padding: 4px 10px; border-radius: 4px; font-size: 0.8em; display: inline-block; margin-bottom: 10px; border: 1px solid #673ab7;">BB · Agente de Tecnologia · Módulo 2</div>
     
-    <div class="hlist a4">
-      <span class="hchip chip-roxo">var (Tipo)</span>
-      <span class="hchip chip-am">Strings</span>
-      <span class="hchip chip-cx">Lambdas</span>
-      <span class="hchip chip-vd">Streams</span>
-      <span class="hchip chip-vm">Exceções</span>
+    <div class="big a2" style="color:var(--roxo, #b388ff); font-size: 2.2em; font-weight: bold; line-height: 1.1;">
+      Java SE 11<br>
+      <span style="color:var(--ciano, #00bcd4);font-size:.5em">Cesgranrio Edition</span>
+    </div>
+    
+    <div class="big a2" style="color:#fff;font-size:clamp(24px,7vw,48px);margin-top:-4px; font-weight: bold;">
+      Novidades &amp; Pegadinhas
+    </div>
+    
+    <div class="a3" style="color:var(--cinza, #aaa);font-size:14px;margin:16px 0">
+      A Cesgranrio ama cobrar as mudanças entre Java 8 e 11
+    </div>
+    
+    <!-- CHIPS DE CONTEÚDO -->
+    <div class="hlist a4" style="margin-bottom: 20px; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;">
+      <span class="hchip chip-roxo" style="background: rgba(103,58,183,0.2); border: 1px solid #673ab7; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #b388ff;">var (Tipo)</span>
+      <span class="hchip chip-am" style="background: rgba(255,152,0,0.2); border: 1px solid #ff9800; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #ffb300;">Strings</span>
+      <span class="hchip chip-cx" style="background: rgba(158,158,158,0.2); border: 1px solid #9e9e9e; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #ccc;">Lambdas</span>
+      <span class="hchip chip-vd" style="background: rgba(76,175,80,0.2); border: 1px solid #4caf50; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #a5d6a7;">Streams</span>
+      <span class="hchip chip-vm" style="background: rgba(244,67,54,0.2); border: 1px solid #f44336; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #ff5252;">Exceções</span>
     </div>
 
+    <!-- PAINEL DE ÁUDIO -->
     <div class="a4" style="margin-top: 25px; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid #333;">
-      <div style="color: var(--ciano); font-size: 11px; margin-bottom: 10px; letter-spacing: 1px; font-weight: bold;">System.out.play("O Som da Posse")</div>
+      <div style="color: var(--ciano, #00bcd4); font-size: 11px; margin-bottom: 12px; letter-spacing: 1px; font-weight: bold; text-transform: uppercase;">
+        > System.out.play("O Som da Posse")
+      </div>
       
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
-        <span style="color: #eee; font-size: 13px; font-family: monospace;">Thread da Posse</span>
+      <!-- Música 1 -->
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+        <span style="color: #eee; font-size: 12px; font-family: monospace;">1. Thread da Posse (Extends Sucesso)</span>
         <div>
-          <button onclick="playAudio('musica1')" style="background: var(--roxo); border: none; color: white; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 10px;">PLAY</button>
-          <button onclick="stopAudio('musica1')" style="background: #444; border: none; color: white; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 10px;">STOP</button>
+          <button onclick="playAudio('musica1')" style="background: var(--roxo, #673ab7); border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold; transition: 0.2s;">PLAY</button>
+          <button onclick="stopAudio('musica1')" style="background: #444; border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold; transition: 0.2s;">STOP</button>
         </div>
       </div>
 
+      <!-- Música 2 -->
       <div style="display: flex; align-items: center; justify-content: space-between;">
-        <span style="color: #eee; font-size: 13px; font-family: monospace;">Polimorfismo da Aprovação</span>
+        <span style="color: #eee; font-size: 12px; font-family: monospace;">2. Polimorfismo da Aprovação</span>
         <div>
-          <button onclick="playAudio('musica2')" style="background: var(--roxo); border: none; color: white; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 10px;">PLAY</button>
-          <button onclick="stopAudio('musica2')" style="background: #444; border: none; color: white; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 10px;">STOP</button>
+          <button onclick="playAudio('musica2')" style="background: var(--roxo, #673ab7); border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold; transition: 0.2s;">PLAY</button>
+          <button onclick="stopAudio('musica2')" style="background: #444; border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold; transition: 0.2s;">STOP</button>
         </div>
       </div>
+    </div>
+
+    <!-- BOTÃO PARA MOSTRAR/OCULTAR A LETRA -->
+    <button class="a4" onclick="toggleLetra()" style="background-color: transparent; border: 1px solid var(--ciano, #00bcd4); color: var(--ciano, #00bcd4); margin-top: 15px; padding: 10px 15px; font-size: 12px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: 0.3s; width: 100%;">
+        🎤 Mostrar / Ocultar Letra da Música
+    </button>
+
+    <!-- CAIXA COM A LETRA (Escondida por padrão, com rolagem) -->
+    <div id="caixaLetra" class="a5" style="display: none; text-align: left; background: rgba(0,0,0,0.6); border-left: 3px solid var(--ciano, #00bcd4); padding: 15px; border-radius: 8px; margin-top: 10px; max-height: 220px; overflow-y: auto; box-shadow: inset 0 0 10px rgba(0,0,0,0.5);">
+        <div style="font-size: 0.85em; line-height: 1.6; color: #ddd;">
+            <b style="color: #a5d6a7;">Verso 1: O Ecossistema</b><br>
+            O código escrito em <span style="font-family: monospace; color:#fff">.java</span> pelo <span style="font-family: monospace; color:#fff">javac</span> vai passar,<br>
+            Gera o bytecode <span style="font-family: monospace; color:#fff">.class</span>, que a máquina vai interpretar.<br>
+            A JVM não é multiplataforma, cada sistema tem a sua,<br>
+            Mas o bytecode roda em qualquer lugar, não é loucura!<br><br>
+
+            <b style="color: #ffb300;">Refrão: Regras de Ouro da Cesgranrio</b><br>
+            Herança de classe é <span style="font-family: monospace; color:#fff">extends</span>, interface é <span style="font-family: monospace; color:#fff">implements</span>!<br>
+            Múltipla herança de classe? O Java não consente!<br>
+            Para tipos primitivos, a passagem é só por valor,<br>
+            E o Java não suporta sobrecarga de operador!<br><br>
+
+            <b style="color: #a5d6a7;">Verso 2: Strings e Interfaces</b><br>
+            Anota aí no peito: toda <span style="font-family: monospace; color:#fff">String</span> é imutável,<br>
+            Modificou o texto? É novo objeto, regra inquestionável!<br>
+            Para checar a igualdade, o <span style="font-family: monospace; color:#fff">==</span> não é o ideal,<br>
+            Use sempre o <span style="font-family: monospace; color:#fff">.equals()</span>, que o acerto é fatal!<br>
+            E variável na interface, não tente alterar,<br>
+            É sempre <span style="font-family: monospace; color:#fff">public static final</span>, o compilador vai barrar!<br><br>
+
+            <b style="color: #2196f3;">Ponte: Exceções e Banco de Dados</b><br>
+            No bloco das exceções, olha bem pro <span style="font-family: monospace; color:#fff">finally</span>,<br>
+            Ele sempre executa, limpando a sujeira ali!<br>
+            A exceção <span style="font-family: monospace; color:#fff">Checked</span> obriga o tratamento na moral,<br>
+            Mas erro de lógica é <span style="font-family: monospace; color:#fff">Unchecked</span>, e o tratamento é opcional!<br>
+            Se caiu o JPA, o Hibernate faz a festa,<br>
+            Fechou a sessão? O objeto é <span style="font-family: monospace; color:#fff">Detached</span>, não testa!<br><br>
+
+            <b style="color: #ff5252;">Encerramento:</b><br>
+            Bytecode na veia, polimorfismo é natural.<br>
+            Agora é só gabaritar no Banco do Brasil e correr pro abraço final!
+        </div>
     </div>
 
     <div class="a5" style="color:rgba(255,255,255,.25);font-size:11px;margin-top:20px;letter-spacing:2px">43 SLIDES · TOQUE PARA AVANÇAR ▶</div>
   </div>
 </div>
-
-<script>
-  // Mock para exemplo. Substitua os links pelos arquivos reais (.mp3)
   const audios = {
     musica1: new Audio('Polimorfismo_da_Aprovacao.mp3'),
     musica2: new Audio('Thread_da_Posse.mp3')
