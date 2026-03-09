@@ -2384,23 +2384,21 @@ document.addEventListener('keydown', (e) => {
 updateUI();
 </script>
 
-<div id="playerFixoGeral" style="position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); z-index: 10000; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); border: 1px solid rgba(0,188,212,0.4); border-radius: 40px; padding: 6px 10px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 4px 25px rgba(0,0,0,0.8); width: 95%; max-width: 420px;">
+<div id="playerFixoGeral" style="position: fixed; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 10000; background: rgba(0,0,0,0.96); backdrop-filter: blur(10px); border: 1px solid rgba(0,188,212,0.5); border-radius: 50px; padding: 5px 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.9); width: 82%; max-width: 340px; gap: 8px;">
     
-    <div style="flex: 1; min-width: 0; margin-right: 5px;">
-        <span id="nomeMusicaAtual" style="color: #fff; font-size: 9px; font-family: monospace; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;">1. Capa</span>
+    <div style="display: flex; align-items: center; gap: 3px; background: rgba(255,255,255,0.07); padding: 3px 6px; border-radius: 20px; border: 1px solid #444; flex-shrink: 0;">
+        <input type="number" id="inputPularSlide" placeholder="Pág" inputmode="numeric" style="width: 60px; background: transparent; border: none; color: #00bcd4; font-size: 13px; font-weight: bold; font-family: monospace; text-align: center; outline: none;">
+        <button onclick="pularParaSlide()" style="background: #00bcd4; border: none; color: #000; cursor: pointer; font-weight: bold; font-size: 8px; padding: 4px 7px; border-radius: 12px; text-transform: uppercase;">IR</button>
     </div>
 
-    <div style="display: flex; align-items: center; gap: 2px; background: rgba(255,255,255,0.05); padding: 2px 4px; border-radius: 15px; border: 1px solid #444; flex-shrink: 0; margin: 0 5px;">
-        <input type="number" id="inputPularSlide" placeholder="página" inputmode="numeric" style="width: 70px; background: transparent; border: none; color: #00bcd4; font-size: 13px; font-weight: bold; font-family: monospace; text-align: center; outline: none;">
-        <button onclick="pularParaSlide()" style="background: #00bcd4; border: none; color: #000; cursor: pointer; font-weight: bold; font-size: 9px; padding: 5px 8px; border-radius: 10px; text-transform: uppercase;">IR</button>
-    </div>
+    <div style="width: 1px; height: 18px; background: rgba(255,255,255,0.15); flex-shrink: 0;"></div>
 
-    <div style="display: flex; gap: 2px; align-items: center; flex-shrink: 0;">
-        <button onclick="prevMusic()" style="background: transparent; border: none; color: #aaa; font-size: 16px; padding: 5px; cursor: pointer;">⏮</button>
+    <div style="display: flex; gap: 3px; align-items: center; flex-shrink: 0;">
+        <button onclick="prevMusic()" style="background: transparent; border: none; color: #888; font-size: 14px; padding: 4px; cursor: pointer;">⏮</button>
         
-        <button id="btnPlayFixo" onclick="tocarSelecionada()" style="background: #673ab7; border: none; color: white; width: 34px; height: 34px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 12px; box-shadow: 0 0 10px rgba(103,58,183,0.4);">▶</button>
+        <button id="btnPlayFixo" onclick="tocarSelecionada()" style="background: #673ab7; border: none; color: white; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 11px; box-shadow: 0 0 8px rgba(103,58,183,0.5);">▶</button>
         
-        <button onclick="nextMusic()" style="background: transparent; border: none; color: #aaa; font-size: 16px; padding: 5px; cursor: pointer;">⏭</button>
+        <button onclick="nextMusic()" style="background: transparent; border: none; color: #888; font-size: 14px; padding: 4px; cursor: pointer;">⏭</button>
     </div>
 </div>
 
