@@ -211,26 +211,49 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
     </div>
 
     <!-- PAINEL DE ÁUDIO -->
-    <div class="a4" style="margin-top: 25px; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid #333;">
+
+<div class="a4" style="margin-top: 25px; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid #333;">
       <div style="color: var(--ciano, #00bcd4); font-size: 11px; margin-bottom: 12px; letter-spacing: 1px; font-weight: bold; text-transform: uppercase;">
-        > System.out.play("O Som da Posse")
+        > System.out.play("Playlist da Aprovação")
       </div>
       
-      <!-- Música 1 -->
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
-        <span style="color: #eee; font-size: 12px; font-family: monospace;">1. Thread da Posse</span>
+        <span style="color: #eee; font-size: 11px; font-family: monospace;">1. Thread da Posse</span>
         <div>
-          <button onclick="playAudio('musica1')" style="background: var(--roxo, #673ab7); border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold; transition: 0.2s;">PLAY</button>
-          <button onclick="stopAudio('musica1')" style="background: #444; border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold; transition: 0.2s;">STOP</button>
+          <button onclick="playAudio('musica1')" style="background: var(--roxo, #673ab7); border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold;">PLAY</button>
+          <button onclick="stopAudio('musica1')" style="background: #444; border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold;">STOP</button>
         </div>
       </div>
 
-      <!-- Música 2 -->
-      <div style="display: flex; align-items: center; justify-content: space-between;">
-        <span style="color: #eee; font-size: 12px; font-family: monospace;">2. Polimorfismo da Aprovação</span>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+        <span style="color: #eee; font-size: 11px; font-family: monospace;">2. Polimorfismo da Aprovação</span>
         <div>
-          <button onclick="playAudio('musica2')" style="background: var(--roxo, #673ab7); border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold; transition: 0.2s;">PLAY</button>
-          <button onclick="stopAudio('musica2')" style="background: #444; border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold; transition: 0.2s;">STOP</button>
+          <button onclick="playAudio('musica2')" style="background: var(--roxo, #673ab7); border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold;">PLAY</button>
+          <button onclick="stopAudio('musica2')" style="background: #444; border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold;">STOP</button>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+        <span style="color: #eee; font-size: 11px; font-family: monospace;">3. Lambda Anônimas</span>
+        <div>
+          <button onclick="playAudio('musica3')" style="background: var(--roxo, #673ab7); border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold;">PLAY</button>
+          <button onclick="stopAudio('musica3')" style="background: #444; border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold;">STOP</button>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+        <span style="color: #eee; font-size: 11px; font-family: monospace;">4. Herança de Sucesso</span>
+        <div>
+          <button onclick="playAudio('musica4')" style="background: var(--roxo, #673ab7); border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold;">PLAY</button>
+          <button onclick="stopAudio('musica4')" style="background: #444; border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold;">STOP</button>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <span style="color: #eee; font-size: 11px; font-family: monospace;">5. Dicas Ti Cesgranrio</span>
+        <div>
+          <button onclick="playAudio('musica5')" style="background: var(--roxo, #673ab7); border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold;">PLAY</button>
+          <button onclick="stopAudio('musica5')" style="background: #444; border: none; color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 10px; font-weight: bold;">STOP</button>
         </div>
       </div>
     </div>
@@ -241,7 +264,14 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
     </button>
 
     <!-- CAIXA COM A LETRA (Escondida por padrão, com rolagem) -->
-    <div id="caixaLetra" class="a5" style="display: none; text-align: left; background: rgba(0,0,0,0.6); border-left: 3px solid var(--ciano, #00bcd4); padding: 15px; border-radius: 8px; margin-top: 10px; max-height: 220px; overflow-y: auto; box-shadow: inset 0 0 10px rgba(0,0,0,0.5);">
+<div id="caixaLetra" class="a5" style="display: none; text-align: left; background: rgba(0,0,0,0.8); border-left: 3px solid var(--ciano, #00bcd4); padding: 15px; border-radius: 8px; margin-top: 10px; max-height: 250px; overflow-y: auto; box-shadow: inset 0 0 15px rgba(0,0,0,0.5);">
+    
+    <div style="display: flex; gap: 5px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px;">
+        <button onclick="exibirMusica(1)" id="btnLetra1" style="flex:1; background: var(--ciano, #00bcd4); border: none; color: #000; font-size: 9px; font-weight: bold; padding: 5px; border-radius: 4px; cursor: pointer;">MÚSICAS 1 e 2</button>
+        <button onclick="exibirMusica(2)" id="btnLetra2" style="flex:1; background: #333; border: none; color: #fff; font-size: 9px; font-weight: bold; padding: 5px; border-radius: 4px; cursor: pointer;">MÚSICA 3 e 4</button>
+    </div>
+
+    <div id="letraConteudo1" style="display: block;">
         <div style="font-size: 0.85em; line-height: 1.6; color: #ddd;">
             <b style="color: #a5d6a7;">Verso 1: O Ecossistema</b><br>
             O código escrito em <span style="font-family: monospace; color:#fff">.java</span> pelo <span style="font-family: monospace; color:#fff">javac</span> vai passar,<br>
@@ -277,22 +307,97 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
         </div>
     </div>
 
+    <div id="letraConteudo2" style="display: none;">
+        <div style="font-size: 0.85em; line-height: 1.6; color: #ddd;">
+            <i style="color: #aaa;">Yeah! Programação também tem vibração...</i><br><br>
+
+            <b style="color: #a5d6a7;">Verso 1: Polimorfismo</b><br>
+            Na herança muda a interpretação,<br>
+            Mesmo método, nova execução.<br>
+            Classe filha chega na função,<br>
+            Sobrescrevendo a operação.<br>
+            No objeto muda a direção,<br>
+            Mas a assinatura mantém conexão.<br>
+            É <span style="font-family: monospace; color:#fff">polimorfismo</span> na programação,<br>
+            Muitos comportamentos na mesma função.<br><br>
+
+            <b style="color: #ffb300;">Pré-Refrão: A Regra de Ouro</b><br>
+            Mas cuidado com a pegadinha então,<br>
+            Na hora da compilação.<br>
+            Se o tipo da referência muda a visão,<br>
+            A chamada segue a declaração.<br><br>
+
+            <b style="color: #2196f3;">🎶 Refrão: Java no Groove</b><br>
+            Java no groove da programação,<br>
+            Código dançando na compilação.<br>
+            Herança muda a execução,<br>
+            Mas mantém a mesma declaração.<br>
+            No swing da orientação,<br>
+            Objeto vive na aplicação 🎶<br><br>
+
+            <b style="color: #ff5252;">Verso 2: Tratamento de Exceções</b><br>
+            Quando o erro entra na execução,<br>
+            A JVM pede proteção.<br>
+            <span style="font-family: monospace; color:#fff">Try</span> no bloco da operação,<br>
+            <span style="font-family: monospace; color:#fff">Catch</span> segura a interrupção.<br>
+            <span style="font-family: monospace; color:#fff">Finally</span> fecha a transação,<br>
+            Garantindo a finalização.<br>
+            Se não tratar na aplicação,<br>
+            A exceção sobe na execução.<br><br>
+
+            <b style="color: #ffb300;">Verso 3: Interfaces</b><br>
+            <span style="font-family: monospace; color:#fff">Interface</span> não tem implementação,<br>
+            Só define o contrato da operação.<br>
+            Classe que entra na construção,<br>
+            Tem que cumprir cada função.<br>
+            Múltiplos caminhos na abstração,<br>
+            Mas sem quebrar a organização.<br><br>
+
+            <b style="color: #a5d6a7;">Ponte: Streams e Lambdas</b><br>
+            Agora chega a nova geração,<br>
+            Com <span style="font-family: monospace; color:#fff">Lambda</span> muda a expressão.<br>
+            Função pequena na declaração,<br>
+            Menos código na aplicação.<br>
+            Mais fluidez na programação,<br>
+            <span style="font-family: monospace; color:#fff">Streams API</span> na coleção.<br>
+            Filtra, mapeia na operação,<br>
+            Dados fluindo na execução.<br><br>
+
+            <b style="color: #2196f3;">🎶 Refrão Final</b><br>
+            Java no groove da programação,<br>
+            <span style="font-family: monospace; color:#fff">Stream</span> rodando na coleção.<br>
+            <span style="font-family: monospace; color:#fff">Lambda</span> muda a expressão,<br>
+            Menos código na função.<br>
+            Se cair na prova da seleção,<br>
+            Segue o flow da orientação 🎶<br><br>
+
+            <b style="color: #aaa;">Final:</b><br>
+            Yeah… Código rodando na aplicação,<br>
+            Java vivendo na compilação.<br>
+            No soul da programação,<br>
+            Aprende regra com emoção! 🎶
+        </div>
+    </div>
+</div>
+
     <div class="a5" style="color:rgba(255,255,255,.25);font-size:11px;margin-top:20px;letter-spacing:2px">43 SLIDES · TOQUE PARA AVANÇAR ▶</div>
   </div>
 </div>
 
 <!-- SCRIPTS DE ÁUDIO E LETRA -->
+
 <script>
-  // Mock para exemplo. Lembre-se de colocar as suas músicas na mesma pasta e com esses nomes exatos.
   const audios = {
     musica1: new Audio('Thread_da_Posse.mp3'),
-    musica2: new Audio('Polimorfismo_da_Aprovacao.mp3')
+    musica2: new Audio('Polimorfismo_da_Aprovacao.mp3'),
+    musica3: new Audio('Java (SE 11 e EE 8) 1.mp3'),
+    musica4: new Audio('Java (SE 11 e EE 8) 2.mp3'),
+    musica5: new Audio('Provas Concurso TI 2.mp3')
   };
 
   function playAudio(id) {
-    // Para todas as músicas antes de dar play em uma nova (evita encavalar o som)
     Object.values(audios).forEach(a => { a.pause(); a.currentTime = 0; });
-    audios[id].play();
+    if(audios[id]) audios[id].play();
   }
 
   function stopAudio(id) {
@@ -302,15 +407,34 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
     }
   }
 
-  // Função para fazer a caixa de letra aparecer e sumir (Toggle)
   function toggleLetra() {
       var caixa = document.getElementById("caixaLetra");
-      if (caixa.style.display === "none") {
-          caixa.style.display = "block";
-      } else {
-          caixa.style.display = "none";
-      }
+      caixa.style.display = (caixa.style.display === "none") ? "block" : "none";
   }
+
+function exibirMusica(numero) {
+    const l1 = document.getElementById("letraConteudo1");
+    const l2 = document.getElementById("letraConteudo2");
+    const b1 = document.getElementById("btnLetra1");
+    const b2 = document.getElementById("btnLetra2");
+
+    if (numero === 1) {
+        l1.style.display = "block";
+        l2.style.display = "none";
+        // Estilo dos botões
+        b1.style.background = "var(--ciano, #00bcd4)"; b1.style.color = "#000";
+        b2.style.background = "#333"; b2.style.color = "#fff";
+    } else {
+        l1.style.display = "none";
+        l2.style.display = "block";
+        // Estilo dos botões
+        b2.style.background = "var(--ciano, #00bcd4)"; b2.style.color = "#000";
+        b1.style.background = "#333"; b1.style.color = "#fff";
+    }
+    
+    // Reseta o scroll para o topo ao trocar
+    document.getElementById("caixaLetra").scrollTop = 0;
+}
 </script>
 
 <!-- ========================================== -->
@@ -2077,7 +2201,85 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-fami
 
 <div id="dots"></div>
 
+
+
+<-------JavaScript------>
+
+<-------player de musica------>
 <script>
+
+let musicaAtualIdx = 1;
+const totalMusicas = 5;
+const nomesMusicas = [
+    "1. Thread da Posse",
+    "2. Polimorfismo da Aprovação",
+    "3. Lambda Anônimas",
+    "4. Herança de Sucesso",
+    "5. Dicas Ti Cesgranrio"
+];
+
+function pularParaSlide() {
+    const input = document.getElementById('inputPularSlide');
+    let slideDesejado = parseInt(input.value);
+    const totalDeSlides = 43; // Baseado no seu contador de slides
+
+    if (isNaN(slideDesejado)) return;
+
+    // Regra: Se maior que o total, vai para o último
+    if (slideDesejado > totalDeSlides) {
+        slideDesejado = totalDeSlides;
+    }
+    
+    // Regra: Se menor que 1, vai para o primeiro
+    if (slideDesejado < 1) {
+        slideDesejado = 1;
+    }
+
+    // Como o índice de slides no código geralmente começa em 0:
+    // Ex: Slide 1 é o index 0, Slide 43 é o index 42.
+    currentSlide = slideDesejado - 1; 
+
+    // Chama a função que você já tem para atualizar a tela
+    updateUI();
+    
+    // Limpa o campo após o pulo
+    input.value = '';
+    input.blur(); // Tira o foco para esconder o teclado no celular
+}
+
+// Opcional: Permitir dar "Enter" no campo de número
+document.getElementById('inputPularSlide')?.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        pularParaSlide();
+    }
+});
+
+function atualizarDisplayPlayer() {
+    document.getElementById('nomeMusicaAtual').innerText = nomesMusicas[musicaAtualIdx - 1];
+}
+
+function tocarSelecionada() {
+    playAudio('musica' + musicaAtualIdx);
+}
+
+function pararTudo() {
+    stopAudio('musica' + musicaAtualIdx);
+}
+
+function nextMusic() {
+    // Lógica circular (se for a 5, volta pra 1)
+    musicaAtualIdx = (musicaAtualIdx % totalMusicas) + 1;
+    atualizarDisplayPlayer();
+    tocarSelecionada();
+}
+
+function prevMusic() {
+    // Lógica circular inversa
+    musicaAtualIdx = (musicaAtualIdx === 1) ? totalMusicas : musicaAtualIdx - 1;
+    atualizarDisplayPlayer();
+    tocarSelecionada();
+}
+
 
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
@@ -2182,5 +2384,24 @@ document.addEventListener('keydown', (e) => {
 updateUI();
 </script>
 
+<div id="playerFixoGeral" style="position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); z-index: 10000; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); border: 1px solid rgba(0,188,212,0.4); border-radius: 40px; padding: 6px 10px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 4px 25px rgba(0,0,0,0.8); width: 95%; max-width: 420px;">
+    
+    <div style="flex: 1; min-width: 0; margin-right: 5px;">
+        <span id="nomeMusicaAtual" style="color: #fff; font-size: 9px; font-family: monospace; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;">1. Capa</span>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 2px; background: rgba(255,255,255,0.05); padding: 2px 4px; border-radius: 15px; border: 1px solid #444; flex-shrink: 0; margin: 0 5px;">
+        <input type="number" id="inputPularSlide" placeholder="página" inputmode="numeric" style="width: 70px; background: transparent; border: none; color: #00bcd4; font-size: 13px; font-weight: bold; font-family: monospace; text-align: center; outline: none;">
+        <button onclick="pularParaSlide()" style="background: #00bcd4; border: none; color: #000; cursor: pointer; font-weight: bold; font-size: 9px; padding: 5px 8px; border-radius: 10px; text-transform: uppercase;">IR</button>
+    </div>
+
+    <div style="display: flex; gap: 2px; align-items: center; flex-shrink: 0;">
+        <button onclick="prevMusic()" style="background: transparent; border: none; color: #aaa; font-size: 16px; padding: 5px; cursor: pointer;">⏮</button>
+        
+        <button id="btnPlayFixo" onclick="tocarSelecionada()" style="background: #673ab7; border: none; color: white; width: 34px; height: 34px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 12px; box-shadow: 0 0 10px rgba(103,58,183,0.4);">▶</button>
+        
+        <button onclick="nextMusic()" style="background: transparent; border: none; color: #aaa; font-size: 16px; padding: 5px; cursor: pointer;">⏭</button>
+    </div>
+</div>
 
 </body></html>
