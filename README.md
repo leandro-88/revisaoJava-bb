@@ -1,4 +1,4 @@
-# 🚀 Plataforma Mobile de Estudo Ativo Gamificada (Java SE 11)
+# Plataforma Mobile de Estudo Ativo Gamificada (Java SE 11)
 
 > **Prova de Conceito (PoC) desenvolvida para o Projeto Integrador do SENAC**
 > **Curso:** Tecnologia em Análise e Desenvolvimento de Sistemas (TADS)
@@ -6,13 +6,13 @@
 
 ---
 
-## 🔗 Links Oficiais
+## Links Oficiais
 * **Deploy em Produção (Vercel):** [https://revisao-java-bb.vercel.app/](https://revisao-java-bb.vercel.app/)
 * **Repositório GitHub:** [https://github.com/leandro-88/revisaoJava-bb](https://github.com/leandro-88/revisaoJava-bb)
 
 ---
 
-## 🎯 Sobre a Prova de Conceito (PoC)
+## Sobre a Prova de Conceito (PoC)
 Esta aplicação valida a viabilidade técnica de uma interface de **Microlearning** para dispositivos móveis, focando na performance e na experiência do usuário (UX).
 
 ### Funcionalidades Validadas:
@@ -23,7 +23,7 @@ Esta aplicação valida a viabilidade técnica de uma interface de **Microlearni
 
 ---
 
-## 🛠️ Stack Tecnológica
+## Stack Tecnológica
 * **Frontend:** HTML5 Semântico e CSS3 (Grid/Flexbox).
 * **Lógica:** Vanilla JavaScript (ES6+).
 * **Hospedagem:** Vercel com integração contínua (CI/CD).
@@ -31,7 +31,7 @@ Esta aplicação valida a viabilidade técnica de uma interface de **Microlearni
 
 ---
 
-## 📁 Organização do Projeto
+## Organização do Projeto
 Para atender às rubricas de **Ambiente de Desenvolvimento**, o projeto segue esta estrutura:
 ```text
 /
