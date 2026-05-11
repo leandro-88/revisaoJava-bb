@@ -39,15 +39,6 @@ Esta aplicação valida a viabilidade técnica de uma interface de **Microlearni
 
 ---
 
-## Organização do Projeto (Ambiente)
-```text
-/
-├── audio/         # Arquivos de áudio (.mp3)
-├── css/           # Estilos (style.css)
-├── js/            # Lógica (script.js)
-├── index.html     # Página principal
-└── README.md      # Documentação
-
 ## Equipe de Desenvolvimento
 - [x] Artur Gabriel Rinaldi
 - [x] Camila Cristina Paiz
@@ -59,3 +50,14 @@ Esta aplicação valida a viabilidade técnica de uma interface de **Microlearni
 - [x] Thamyres Tatikawa Haddad
 
 **Professor Orientador:** Me. Anderson Clayton Garcia Lopes
+
+## Organização do Projeto (Ambiente)
+```text
+/
+├── audio/         # Arquivos de áudio (.mp3)
+├── css/           # Estilos (style.css)
+├── js/            # Lógica (script.js)
+├── index.html     # Página principal
+└── README.md      # Documentação
+'''
+
