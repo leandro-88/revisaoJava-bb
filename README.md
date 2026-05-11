@@ -11,7 +11,7 @@ Assista ao vídeo de 1 minuto validando as funcionalidades mobile, o player de �
 
 [![Assista ao vídeo](https://img.youtube.com/vi/5lzr1aqk4Wc/0.jpg)](https://youtu.be/5lzr1aqk4Wc)
 
-*Clique na imagem acima ou no link para abrir o player:* [https://www.youtube.com/watch?v=hhmvumWsbj4](https://www.youtube.com/watch?v=hhmvumWsbj4)
+*Clique na imagem acima ou no link para abrir o player:* [https://youtu.be/5lzr1aqk4Wc](https://youtu.be/5lzr1aqk4Wc)
 
 ---
 
