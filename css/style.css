@@ -1,0 +1,121 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E VARIÁVEIS
+   ========================================================================== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --az:#003B6F; --az2:#0057A8; --am:#FFD000; --or:#FF6B00;
+  --vd:#00A86B; --vm:#E53935; --br:#FFFFFF; --esc:#0A0A0A;
+  --esc2:#141414; --esc3:#1E1E1E; --cinza:#888; --claro:#F0EDE8;
+  --roxo:#7C3AED; --ciano:#06B6D4;
+}
+
+/* ==========================================================================
+   FONTES
+   ========================================================================== */
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bebasneue/v16/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300 400 500 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2) format('woff2');
+}
+
+/* ==========================================================================
+   LAYOUT BASE E ESTRUTURA DE SLIDES
+   ========================================================================== */
+html,body{width:100%;height:100%;overflow:hidden;background:var(--esc);font-family:'DM Sans',sans-serif;color:var(--br)}
+
+#topbar{position:fixed;top:0;left:0;right:0;height:3px;background:rgba(255,208,0,.2);z-index:200}
+#topfill{height:100%;background:var(--am);transition:width .4s ease;width:0%}
+#counter{position:fixed;top:10px;right:14px;font-size:10px;font-weight:700;color:rgba(255,255,255,.35);z-index:200;letter-spacing:1px}
+#stage{width:100%;height:100%;position:relative;overflow:hidden}
+
+.slide{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px 20px 80px;opacity:0;pointer-events:none;transform:translateX(50px);transition:opacity .45s ease,transform .45s ease}
+.slide.active{opacity:1;pointer-events:all;transform:translateX(0)}
+.slide.out{opacity:0;transform:translateX(-50px);transition:opacity .3s ease,transform .3s ease}
+
+.sc {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  max-height: calc(100vh - 140px);
+  padding-bottom: 20px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.sc::-webkit-scrollbar{display:none}
+
+/* BACKGROUNDS TEMÁTICOS */
+.s-dark{background:var(--esc)}
+.s-az{background:var(--az)}
+.s-roxo{background:#1A0A3A}
+.s-code{background:#0D1117}
+.s-warn{background:#3B0000}
+.s-green{background:#003D1F}
+.s-quiz{background:#0A1A2F}
+.s-light{background:#F8F6F0}
+
+/* TIPOGRAFIA INTERNA */
+.big{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,13vw,90px);line-height:.92;letter-spacing:1px;text-align:center}
+.ctitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,8vw,54px);letter-spacing:1px;line-height:1;margin-bottom:12px;text-align:center}
+.badge{display:inline-block;padding:4px 12px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.badge-am{background:var(--am);color:var(--esc)}
+.badge-br{background:var(--br);color:var(--az)}
+.badge-or{background:var(--or);color:#fff}
+.badge-vd{background:var(--vd);color:#fff}
+.badge-vm{background:var(--vm);color:#fff}
+.badge-cx{background:var(--ciano);color:var(--esc)}
+.badge-roxo{background:var(--roxo);color:#fff}
+.body{font-size:clamp(13px,3.8vw,16px);line-height:1.65}
+.sm{font-size:clamp(11px,3vw,13px);line-height:1.6;opacity:.85}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* CARDS E ELEMENTOS VISUAIS */
+.card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:16px 18px;width:100%;margin:6px 0}
+.card-w{background:#fff;border-radius:12px;padding:16px 18px;width:100%;margin:6px 0;color:var(--esc)}
+.card-am{background:rgba(255,208,0,.12);border:1px solid rgba(255,208,0,.3);border-radius:12px;padding:14px 18px;width:100%;margin:6px 0}
+.card-vd{background:rgba(0,168,107,.12);border:1px solid rgba(0,168,107,.3);border-radius:12px;padding:14px 18px;width:100%;margin:6px 0}
+.card-vm{background:rgba(229,57,53,.12);border:1px solid rgba(229,57,53,.3);border-radius:12px;padding:14px 18px;width:100%;margin:6px 0}
+.card-cx{background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.3);border-radius:12px;padding:14px 18px;width:100%;margin:6px 0}
+.card-roxo{background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.3);border-radius:12px;padding:14px 18px;width:100%;margin:6px 0}
+
+/* COMPONENTES DE QUIZ */
+.qopt{background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.15);border-radius:10px;padding:11px 15px;width:100%;color:#fff;cursor:pointer;margin:4px 0;text-align:left;font-family:'DM Sans',sans-serif;font-size:clamp(12px,3.5vw,14px);font-weight:500;transition:all .2s}
+.qopt:hover{background:rgba(255,208,0,.15);border-color:var(--am)}
+.qopt.correct{background:rgba(0,168,107,.35)!important;border-color:var(--vd)!important}
+.qopt.wrong{background:rgba(229,57,53,.35)!important;border-color:var(--vm)!important}
+.qfb{font-size:12px;color:var(--am);text-align:center;margin-top:8px;font-weight:700;min-height:20px;white-space:pre-wrap;line-height:1.5}
+
+/* NAVEGAÇÃO E PLAYER FIXO */
+#nav {position: fixed; bottom: 30px; left: 0; right: 0; display: flex; justify-content: space-between; padding: 0 18px; z-index: 999;}
+#playerFixoGeral { transition: all .3s ease; }
+.nbtn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff;width:42px;height:42px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;backdrop-filter:blur(8px)}
+.nbtn:hover{background:var(--am);color:var(--esc);border-color:var(--am)}
+#dots{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:200}
+.dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .3s}
+.dot.active{background:var(--am);width:14px;border-radius:3px}
+
+/* ANIMAÇÕES */
+@keyframes slideIn{from{transform:translateX(-20px);opacity:0}to{transform:translateX(0);opacity:1}}
+.a1{animation:slideIn .5s ease .05s both}
+.a2{animation:slideIn .5s ease .2s both}
