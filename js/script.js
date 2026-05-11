@@ -227,5 +227,26 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') prev();
 });
 
+/* ==========================================================================
+   6. INTERFACE MOBILE (Toggle Player)
+   ========================================================================== */
+function toggleMiniPlayer() {
+    const conteudo = document.getElementById('playerConteudo');
+    const btn = document.getElementById('btnMinPlayer');
+    const player = document.getElementById('playerFixoGeral');
+    
+    if (conteudo.style.display === 'none') {
+        conteudo.style.display = 'flex';
+        btn.innerHTML = '▼';
+        btn.title = 'Minimizar';
+        player.style.maxWidth = '320px';
+    } else {
+        conteudo.style.display = 'none';
+        btn.innerHTML = '♪';
+        btn.title = 'Expandir player';
+        player.style.maxWidth = '42px';
+    }
+}
+
 // Inicialização
 updateUI();
