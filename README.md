@@ -1,4 +1,4 @@
-# Plataforma Mobile de Estudo Ativo Gamificada (Java SE 11)
+# 🚀 Plataforma Mobile de Estudo Ativo Gamificada (Java SE 11)
 
 > **Prova de Conceito (PoC) desenvolvida para o Projeto Integrador do SENAC**
 > **Curso:** Tecnologia em Análise e Desenvolvimento de Sistemas (TADS)
@@ -6,13 +6,22 @@
 
 ---
 
-## Links Oficiais
+## 🎥 Demonstração da Plataforma (Player)
+Assista ao vídeo de 1 minuto validando as funcionalidades mobile, o player de áudio e o motor de quiz:
+
+[![Assista ao vídeo](https://img.youtube.com/vi/hhmvumWsbj4/0.jpg)](https://www.youtube.com/watch?v=hhmvumWsbj4)
+
+*Clique na imagem acima ou no link para abrir o player:* [https://www.youtube.com/watch?v=hhmvumWsbj4](https://www.youtube.com/watch?v=hhmvumWsbj4)
+
+---
+
+## 🔗 Links Oficiais
 * **Deploy em Produção (Vercel):** [https://revisao-java-bb.vercel.app/](https://revisao-java-bb.vercel.app/)
 * **Repositório GitHub:** [https://github.com/leandro-88/revisaoJava-bb](https://github.com/leandro-88/revisaoJava-bb)
 
 ---
 
-## Sobre a Prova de Conceito (PoC)
+## 🎯 Sobre a Prova de Conceito (PoC)
 Esta aplicação valida a viabilidade técnica de uma interface de **Microlearning** para dispositivos móveis, focando na performance e na experiência do usuário (UX).
 
 ### Funcionalidades Validadas:
@@ -23,16 +32,14 @@ Esta aplicação valida a viabilidade técnica de uma interface de **Microlearni
 
 ---
 
-## Stack Tecnológica
+## 🛠️ Stack Tecnológica
 * **Frontend:** HTML5 Semântico e CSS3 (Grid/Flexbox).
 * **Lógica:** Vanilla JavaScript (ES6+).
 * **Hospedagem:** Vercel com integração contínua (CI/CD).
-* **Versionamento:** Git/GitHub.
 
 ---
 
-## Organização do Projeto
-Para atender às rubricas de **Ambiente de Desenvolvimento**, o projeto segue esta estrutura:
+## 📁 Organização do Projeto (Ambiente)
 ```text
 /
 ├── audio/         # Arquivos de áudio (.mp3)
@@ -40,3 +47,15 @@ Para atender às rubricas de **Ambiente de Desenvolvimento**, o projeto segue es
 ├── js/            # Lógica (script.js)
 ├── index.html     # Página principal
 └── README.md      # Documentação
+
+## 👥 Equipe de Desenvolvimento
+- [x] Artur Gabriel Rinaldi
+- [x] Camila Cristina Paiz
+- [x] Henrique Simões de Souza
+- [x] **Leandro Abreu de Oliveira Filho**
+- [x] Leonardo Freire de Albuquerque Mello
+- [x] Ricardo Cezar Perna
+- [x] Roger Vinícius Teixeira Seixas Cruz
+- [x] Thamyres Tatikawa Haddad
+
+**Professor Orientador:** Me. Anderson Clayton Garcia Lopes
