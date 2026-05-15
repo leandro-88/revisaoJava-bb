@@ -2,8 +2,6 @@
 
 > **Prova de Conceito (PoC) desenvolvida para o Projeto Integrador do SENAC**
 > **Curso:** Tecnologia em Análise e Desenvolvimento de Sistemas (TADS)
-> **Foco:** Preparação para o concurso de Agente de Tecnologia do Banco do Brasil.
-
 ---
 
 ## Demonstração da Plataforma (Player)
