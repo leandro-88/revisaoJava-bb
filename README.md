@@ -25,7 +25,7 @@ Assista ao vídeo de 1 minuto validando as funcionalidades mobile, o player de �
 Esta aplicação valida a viabilidade técnica de uma interface de **Microlearning** otimizada para dispositivos móveis, priorizando a alta performance e a fricção mínima na experiência do usuário (UX).
 
 ### Funcionalidades Validadas:
-* **SPA (Single Page Application):** Interatividade entre 43 slides sem  recarregamento.
+* **SPA (Single Page Application):** Interatividade entre 43 slides sem recarregamento.
 * **Áudio Síncrono:** Player fixo integrado para podcasts educativos.
 * **Motor de Quiz:** 15 questões técnicas com feedback instantâneo via JavaScript.
 * **Arquitetura Cross-Platform:** Compatível com qualquer navegador moderno (Android/iOS).
