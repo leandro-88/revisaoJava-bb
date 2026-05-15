@@ -11,7 +11,7 @@ Assista ao vídeo de 1 minuto validando as funcionalidades mobile, o player de �
 
 [![Assista ao vídeo](https://img.youtube.com/vi/5lzr1aqk4Wc/0.jpg)](https://youtu.be/5lzr1aqk4Wc)
 
-*Clique na imagem acima ou no link para abrir o player:* [https://youtu.be/5lzr1aqk4Wc](https://youtu.be/5lzr1aqk4Wc)
+* Explore o material clicando na imagem ou pelo link do player interativo:  [https://youtu.be/5lzr1aqk4Wc](https://youtu.be/5lzr1aqk4Wc)
 
 ---
 
@@ -22,13 +22,13 @@ Assista ao vídeo de 1 minuto validando as funcionalidades mobile, o player de �
 ---
 
 ## Sobre a Prova de Conceito (PoC)
-Esta aplicação valida a viabilidade técnica de uma interface de **Microlearning** para dispositivos móveis, focando na performance e na experiência do usuário (UX).
+Esta aplicação valida a viabilidade técnica de uma interface de **Microlearning** otimizada para dispositivos móveis, priorizando a alta performance e a fricção mínima na experiência do usuário (UX).
 
 ### Funcionalidades Validadas:
-* **SPA (Single Page Application):** Navegação entre 43 slides sem recarregamento.
+* **SPA (Single Page Application):** Interatividade entre 43 slides sem recarregamento.
 * **Áudio Síncrono:** Player fixo integrado para podcasts educativos.
 * **Motor de Quiz:** 15 questões técnicas com feedback instantâneo via JavaScript.
-* **Arquitetura Cross-Platform:** Funciona em qualquer navegador moderno (Android/iOS).
+* **Arquitetura Cross-Platform:** Compatível com qualquer navegador moderno (Android/iOS).
 
 ---
 
