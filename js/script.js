@@ -175,60 +175,7 @@ function pularParaSlide() {
 }
 
 /* ==========================================================================
-   5. LÓGICA DO QUIZ (Feedback instantâneo)
-   ========================================================================== */
-function ans(btn, quizId, selected) {
-    const correct = {
-        'q1': 'B', 'q2': 'B', 'q3': 'D', 'q4': 'A', 'q5': 'C',
-        'q6': 'C', 'q7': 'C', 'q8': 'C', 'q9': 'B', 'q10': 'B',
-        'q11': 'C', 'q12': 'B', 'q13': 'C', 'q14': 'B', 'q15': 'C'
-    };
-    const feedback = {
-        'q1': 'Em Java, herdar é extends, mas Interface é OBRIGATORIAMENTE implements.',
-        'q2': 'Sem operações terminais, o stream não executa nada (Lazy Evaluation).',
-        'q3': '"var" exige um tipo explícito no lado direito; null é inválido.',
-        'q4': 'new String() força a criação de um novo objeto no Heap; use .equals().',
-        'q5': 'Na sobrescrita, o filho não pode ser mais restritivo que o pai.',
-        'q6': 'Não é permitido colocar o tamanho do Array do lado esquerdo da declaração.',
-        'q7': 'Ordem: Blocos Estáticos, Blocos de Instância e Construtor.',
-        'q8': 'Variáveis em interfaces são implicitamente "public static FINAL".',
-        'q9': 'O bloco "finally" tem precedência absoluta sobre o retorno do try.',
-        'q10': 'Deve-se invocar manualmente super(valor) se o pai não tem construtor vazio.',
-        'q11': 'Strings são imutáveis; métodos geram novas instâncias.',
-        'q12': 'Mudar apenas o tipo de retorno não configura sobrecarga válida.',
-        'q13': 'Switch com String null lança NullPointerException.',
-        'q14': 'Set (HashSet) recusa duplicatas silenciosamente.',
-        'q15': 'new Funcionario[3] cria referências (gavetas), não instâncias.'
-    };
-
-    document.querySelectorAll(`#${quizId}-opts .qopt`).forEach(b => b.disabled = true);
-    const fb = document.getElementById(`${quizId}-fb`);
-    if (selected === correct[quizId]) {
-        btn.classList.add('correct');
-        fb.textContent = '✅ Correto! ' + feedback[quizId];
-    } else {
-        btn.classList.add('wrong');
-        fb.textContent = '❌ Incorreto. ' + feedback[quizId];
-    }
-}
-
-function toggleMiniPlayer() {
-    const conteudo = document.getElementById('playerConteudo');
-    const btn = document.getElementById('btnMinPlayer');
-    const player = document.getElementById('playerFixoGeral');
-    const isHidden = conteudo.style.display === 'none';
-    conteudo.style.display = isHidden ? 'flex' : 'none';
-    btn.innerHTML = isHidden ? '▼' : '♪';
-    player.style.maxWidth = isHidden ? '320px' : '42px';
-}
-
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight' || e.key === ' ') next();
-    if (e.key === 'ArrowLeft') prev();
-});
-
-/* ==========================================================================
-   6. INTERFACE MOBILE (Toggle Player)
+   5. INTERFACE MOBILE E EVENTOS
    ========================================================================== */
 function toggleMiniPlayer() {
     const conteudo = document.getElementById('playerConteudo');
@@ -248,11 +195,42 @@ function toggleMiniPlayer() {
     }
 }
 
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') next();
+    if (e.key === 'ArrowLeft') prev();
+});
+
 /* ==========================================================================
-   CAMADA DE BACKEND E DADOS (Simulação de Repositório e API)
+   6. MOTOR DO QUIZ (Consumindo a Camada de Serviço / API Simulada)
+   ========================================================================== */
+function ans(btn, quizId, selected) {
+    // Chamada formal à camada de serviço do "Backend" simulado
+    const resultado = QuizApiService.validarResposta(quizId, selected);
+    
+    if (resultado.erro) {
+        console.error(resultado.mensagem);
+        return;
+    }
+
+    // Bloqueia duplo clique desativando as opções da questão atual
+    document.querySelectorAll(`#${quizId}-opts .qopt`).forEach(b => b.disabled = true);
+    const fb = document.getElementById(`${quizId}-fb`);
+    
+    // Renderiza o feedback visual baseado no payload retornado pela API
+    if (resultado.correto) {
+        btn.classList.add('correct');
+        fb.textContent = '✅ Correto! ' + resultado.feedbackTexto;
+    } else {
+        btn.classList.add('wrong');
+        fb.textContent = '❌ Incorreto. ' + resultado.feedbackTexto;
+    }
+}
+
+/* ==========================================================================
+   7. CAMADA DE BACKEND E DADOS (Banco de Dados In-Memory e API Service)
    ========================================================================== */
 
-// 1. BANCO DE DADOS IN-MEMORY (Modelagem Estruturada de Dados)
+// Banco de dados simulado contendo o gabarito estruturado e feedbacks pedagógicos
 const DatabaseRepository = {
     questoes: {
         'q1': { corretas: 'B', feedback: 'Em Java, herdar é extends, mas Interface é OBRIGATORIAMENTE implements.' },
@@ -273,7 +251,7 @@ const DatabaseRepository = {
     }
 };
 
-// 2. SERVIÇO DE BACKEND (Abstração de Regra de Negócio e Validação de Dados)
+// Interface de serviço para validação e lógica de negócio desacoplada
 const QuizApiService = {
     validarResposta: function(quizId, alternativaSelecionada) {
         const questao = DatabaseRepository.questoes[quizId];
@@ -290,5 +268,5 @@ const QuizApiService = {
     }
 };
 
-// Inicialização
+// Inicialização do fluxo do ciclo de vida da UI
 updateUI();
