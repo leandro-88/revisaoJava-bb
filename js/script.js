@@ -248,5 +248,47 @@ function toggleMiniPlayer() {
     }
 }
 
+/* ==========================================================================
+   CAMADA DE BACKEND E DADOS (Simulação de Repositório e API)
+   ========================================================================== */
+
+// 1. BANCO DE DADOS IN-MEMORY (Modelagem Estruturada de Dados)
+const DatabaseRepository = {
+    questoes: {
+        'q1': { corretas: 'B', feedback: 'Em Java, herdar é extends, mas Interface é OBRIGATORIAMENTE implements.' },
+        'q2': { corretas: 'B', feedback: 'Sem operações terminais, o stream não executa nada (Lazy Evaluation).' },
+        'q3': { corretas: 'D', feedback: '"var" exige um tipo explícito no lado direito; null é inválido.' },
+        'q4': { corretas: 'A', feedback: 'new String() força a criação de um novo objeto no Heap; use .equals().' },
+        'q5': { corretas: 'C', feedback: 'Na sobrescrita, o filho não pode ser mais restritivo que o pai.' },
+        'q6': { corretas: 'C', feedback: 'Não é permitido colocar o tamanho do Array do lado esquerdo da declaração.' },
+        'q7': { corretas: 'C', feedback: 'Ordem: Blocos Estáticos, Blocos de Instância e Construtor.' },
+        'q8': { corretas: 'C', feedback: 'Variáveis em interfaces são implicitamente "public static FINAL".' },
+        'q9': { corretas: 'B', feedback: 'O bloco "finally" tem precedência absoluta sobre o retorno do try.' },
+        'q10': { corretas: 'B', feedback: 'Deve-se invocar manualmente super(valor) se o pai não tem construtor vazio.' },
+        'q11': { corretas: 'C', feedback: 'Strings são imutáveis; métodos geram novas instâncias.' },
+        'q12': { corretas: 'B', feedback: 'Mudar apenas o tipo de retorno não configura sobrecarga válida.' },
+        'q13': { corretas: 'C', feedback: 'Switch com String null lança NullPointerException.' },
+        'q14': { corretas: 'B', feedback: 'Set (HashSet) recusa duplicatas silenciosamente.' },
+        'q15': { corretas: 'C', feedback: 'new Funcionario[3] cria referências (gavetas), não instâncias.' }
+    }
+};
+
+// 2. SERVIÇO DE BACKEND (Abstração de Regra de Negócio e Validação de Dados)
+const QuizApiService = {
+    validarResposta: function(quizId, alternativaSelecionada) {
+        const questao = DatabaseRepository.questoes[quizId];
+        if (!questao) {
+            return { erro: true, mensagem: "Questão não localizada no banco de dados." };
+        }
+        
+        const ehCorreta = questao.corretas === alternativaSelecionada;
+        return {
+            sucesso: true,
+            correto: ehCorreta,
+            feedbackTexto: questao.feedback
+        };
+    }
+};
+
 // Inicialização
 updateUI();
